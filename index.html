@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="srtyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <table id="myInputs" class="table table-responsive">
+      <div
+        class="card shadow mb-4"
+        style="margin-left: 10px; margin-right: 10px"
+      >
+        <div class="card-header py-3">
+          <div class="panel-body">
+            <div class="row" required>
+              <div class="col-xs-6 col-md">
+                <label
+                  style="
+                    margin-left: 130px;
+                    font-weight: bold;
+                    color: grey;
+                    width: 60px;
+                  "
+                  class="control-label"
+                  for="input-model"
+                  >DATE</label
+                >
+                <input
+                  type="date"
+                  name="filter_date"
+                  value=""
+                  style="text-align: center"
+                  id="txtDATE"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col-md col-xs-6">
+                <label
+                  style="
+                    margin-left: 130px;
+                    font-weight: bold;
+                    color: grey;
+                    width: 60px;
+                  "
+                  for="input-model"
+                  >CODE</label
+                >
+                <input
+                  type="text"
+                  name="filter_code"
+                  value=""
+                  maxlength="11"
+                  style="text-align: center"
+                  placeholder=""
+                  id="txtCODE"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col-md col-xs-6">
+                <label
+                  style="
+                    margin-left: 100px;
+                    font-weight: bold;
+                    color: grey;
+                    width: 150px;
+                  "
+                  class="control-label"
+                  for="input-model"
+                  >DESCRIPTION</label
+                >
+                <input
+                  type="text"
+                  name="filter_description"
+                  value=""
+                  style="text-align: center"
+                  id="txtDESCRIPTION"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col-md col-xs-6">
+                <label
+                  style="
+                    margin-left: 120px;
+                    font-weight: bold;
+                    color: grey;
+                    width: 60px;
+                  "
+                  class="control-label"
+                  for="input-model"
+                  >DEBIT</label
+                >
+                <input
+                  type="text"
+                  name="filter_debit"
+                  value=""
+                  style="text-align: center"
+                  id="txtDEBIT"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col-md col-xs-6">
+                <label
+                  style="
+                    margin-left: 120px;
+                    font-weight: bold;
+                    color: grey;
+                    width: 60px;
+                  "
+                  class="control-label"
+                  for="input-status"
+                  >CREDIT</label
+                >
+                <input
+                  type="text"
+                  name="filter_credit"
+                  value=""
+                  style="text-align: center"
+                  id="txtCREDIT"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div
+                class="form-group text-right"
+                style="
+                  padding-top: 31px;
+                  padding-bottom: 0px;
+                  margin-right: 10px;
+                  margin-bottom: 0;
+                "
+              >
+                <button
+                  type="button"
+                  id="btnAdd"
+                  class="btn btn-primary"
+                  value="Add"
+                >
+                  <i class="fa fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </table>
+    <div class="panel-heading">
+      <center>
+        <button
+          class="btn btn-success btn-lg"
+          style="margin-right: 5px; margin-top: -20px"
+          id="btnSAVE"
+        >
+          <i class="fa fa-save"></i> <span class="hidden-xs">SAVE</span>
+        </button>
+      </center>
+    </div>
+    <div class="card shadow mb-4" style="margin-left: 10px; margin-right: 10px">
+      <div class="card-header py-3">
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table
+              class="table table-bordered"
+              id="myTable"
+              width="100%"
+              cellspacing="0"
+              style="text-align: center"
+            >
+              <thead>
+                <tr>
+                  <th style="vertical-align: middle"><center>DATE</center></th>
+                  <th style="vertical-align: middle"><center>CODE</center></th>
+                  <th style="vertical-align: middle">
+                    <center>DESCRIPTION</center>
+                  </th>
+                  <th style="vertical-align: middle"><center>DEBIT</center></th>
+                  <th style="vertical-align: middle">
+                    <center>CREDIT</center>
+                  </th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
